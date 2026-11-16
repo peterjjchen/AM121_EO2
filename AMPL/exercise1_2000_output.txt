@@ -1,0 +1,132 @@
+CPLEX 22.2.0:   tech:mipdisplay = 2
+  mip:gap = 0
+  tech:threads = 1
+  tech:timing = 1
+
+AMPL MP initial flat model has 246852 variables (0 integer, 246852 binary);
+Objectives: 1 linear; 
+Constraints:  127394 linear;
+
+AMPL MP final model has 246852 variables (0 integer, 246852 binary);
+Objectives: 1 linear; 
+Constraints:  127394 linear;
+
+
+Version identifier: 22.2.0.0 | 2026-05-04 | 5dff98e58
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 0.000000 after 0.01 sec. (14.66 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 1993 rows and 5110 columns.
+MIP Presolve modified 5 coefficients.
+Aggregator did 123426 substitutions.
+Reduced MIP has 1975 rows, 118316 columns, and 236616 nonzeros.
+Reduced MIP has 118316 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.48 sec. (697.09 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 0 rows and 2 columns.
+MIP Presolve modified 4 coefficients.
+Reduced MIP has 1975 rows, 118314 columns, and 236618 nonzeros.
+Reduced MIP has 118314 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.17 sec. (239.02 ticks)
+Probing time = 0.04 sec. (33.24 ticks)
+Clique table members: 1976.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.08 sec. (185.44 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000   236630.0000              --- 
+      0     0     1194.0000    14        0.0000     1194.0000     2843     --- 
+*     0+    0                         1190.0000     1194.0000             0.34%
+*     0+    0                         1192.0000     1194.0000             0.17%
+      0     0     1194.0000    24     1192.0000       Cuts: 5     3031    0.17%
+      0     0     1194.0000    10     1192.0000       Cuts: 2     3037    0.17%
+
+Repeating presolve.
+Tried aggregator 1 time.
+MIP Presolve eliminated 34 rows and 31865 columns.
+Reduced MIP has 1941 rows, 86449 columns, and 172884 nonzeros.
+Reduced MIP has 86449 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.13 sec. (168.34 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 17 rows and 521 columns.
+Reduced MIP has 1924 rows, 85928 columns, and 171832 nonzeros.
+Reduced MIP has 85928 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.12 sec. (168.86 ticks)
+Represolve time = 0.30 sec. (412.64 ticks)
+Probing time = 0.03 sec. (24.19 ticks)
+Clique table members: 1924.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.08 sec. (175.24 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         1192.0000     1194.0000             0.17%
+      0     0     1194.0000    38     1192.0000     1194.0000     6344    0.17%
+      0     0     1194.0000    10     1192.0000       Cuts: 2     6358    0.17%
+      0     0     1194.0000    12     1192.0000       Cuts: 5     6374    0.17%
+      0     2     1194.0000     6     1192.0000     1194.0000     6374    0.17%
+Elapsed time = 3.30 sec. (6052.76 ticks, tree = 0.01 MB, solutions = 2)
+     10    12     1194.0000     8     1192.0000     1194.0000     6417    0.17%
+     24    26     1194.0000    10     1192.0000     1194.0000     6482    0.17%
+     40    42     1194.0000     8     1192.0000     1194.0000     6610    0.17%
+     60    62     1194.0000     8     1192.0000     1194.0000     6726    0.17%
+     76    56    infeasible           1192.0000     1194.0000     6844    0.17%
+     94    56    infeasible           1192.0000     1194.0000     6990    0.17%
+    113    55    infeasible           1192.0000     1194.0000     7125    0.17%
+    136    68     1194.0000    16     1192.0000     1194.0000     7299    0.17%
+    161    91     1194.0000    10     1192.0000     1194.0000     7655    0.17%
+    246   146     1194.0000     8     1192.0000     1194.0000     9017    0.17%
+Elapsed time = 4.62 sec. (9314.41 ticks, tree = 5.72 MB, solutions = 2)
+    321   191     1194.0000     8     1192.0000     1194.0000    10458    0.17%
+    402   249     1194.0000     8     1192.0000     1194.0000    11396    0.17%
+    474   313     1194.0000    16     1192.0000     1194.0000    11826    0.17%
+
+Performing restart 1
+
+Repeating presolve.
+Tried aggregator 1 time.
+MIP Presolve eliminated 0 rows and 16 columns.
+Reduced MIP has 1924 rows, 85912 columns, and 171816 nonzeros.
+Reduced MIP has 85912 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.11 sec. (146.51 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 1924 rows, 85912 columns, and 171816 nonzeros.
+Reduced MIP has 85912 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.13 sec. (164.98 ticks)
+Represolve time = 0.59 sec. (723.96 ticks)
+*   478     0      integral     0     1192.0000     1194.0000    14888    0.17%
+
+Clique cuts applied:  1
+Zero-half cuts applied:  2
+Gomory fractional cuts applied:  3
+
+Root node processing (before b&c):
+  Real time             =    3.30 sec. (6047.68 ticks)
+Sequential b&c:
+  Real time             =    7.71 sec. (9707.61 ticks)
+                          ------------
+Total (root+branch&cut) =   11.00 sec. (15755.29 ticks)
+CPLEX 22.2.0: optimal solution; objective 1192
+14888 simplex iterations
+478 branching nodes
+Setup time = 0.150073s
+Solver time = 11.004047s
+Total time = 11.154133s
+
+suffix time OUT;
+suffix time_setup OUT;
+suffix time_solver OUT;
+Time (seconds): AMPL processing = 3.161 | Solver = 11.252 | Total = 14.413
+Pairs: 2000 | Patients matched: 1192 | Swaps: 596 | Matched: 59.60%

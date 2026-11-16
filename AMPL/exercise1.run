@@ -1,15 +1,26 @@
 reset;
+option times 0;
+option gentimes 0;
 model exercise1.mod;
 data exercise1.dat;
 
+# Keep a terminal transcript alongside the separate match matrix.
+option log_file ("exercise1_" & n & "_output.txt");
+
 option solver cplex;
 option cplex_options 'mipdisplay=2 mipgap=0 threads=1 timing=1';
-option times 1;
+
+# Measure AMPL work without printing a line for every compiled command.
+param ampl_start;
+let ampl_start := _ampl_elapsed_time;
 
 read {i in V, j in V} c[i,j] < (raw_file);
 close (raw_file);
 
 solve;
+printf "Time (seconds): AMPL processing = %.3f | Solver = %.3f | Total = %.3f\n",
+    _ampl_elapsed_time - ampl_start, _solve_elapsed_time,
+    _ampl_elapsed_time - ampl_start + _solve_elapsed_time;
 if solve_result_num >= 100 then {
     printf "No optimal solution reported (%s).\n", solve_result;
     exit 1;
@@ -22,3 +33,4 @@ param output_file symbolic := "exercise1_" & n & "_matches.txt";
 print {i in V}:
     {j in V} (if (i,j) in E then round(X[i,j]) else 0) > (output_file);
 close (output_file);
+option log_file '';

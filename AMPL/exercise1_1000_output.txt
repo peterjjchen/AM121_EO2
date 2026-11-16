@@ -1,0 +1,72 @@
+CPLEX 22.2.0:   tech:mipdisplay = 2
+  mip:gap = 0
+  tech:threads = 1
+  tech:timing = 1
+
+AMPL MP initial flat model has 65760 variables (0 integer, 65760 binary);
+Objectives: 1 linear; 
+Constraints:  34848 linear;
+
+AMPL MP final model has 65760 variables (0 integer, 65760 binary);
+Objectives: 1 linear; 
+Constraints:  34848 linear;
+
+
+Version identifier: 22.2.0.0 | 2026-05-04 | 5dff98e58
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 0.000000 after 0.00 sec. (3.78 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 1007 rows and 2897 columns.
+MIP Presolve modified 7 coefficients.
+Aggregator did 32880 substitutions.
+Reduced MIP has 961 rows, 29983 columns, and 59937 nonzeros.
+Reduced MIP has 29983 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.12 sec. (173.25 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 37 rows and 1693 columns.
+MIP Presolve modified 2 coefficients.
+Reduced MIP has 924 rows, 28290 columns, and 56546 nonzeros.
+Reduced MIP has 28290 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.05 sec. (67.32 ticks)
+Probing time = 0.01 sec. (10.22 ticks)
+Clique table members: 925.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.04 sec. (72.56 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000    56596.0000              --- 
+      0     0      614.0000    28        0.0000      614.0000     1593     --- 
+*     0+    0                          610.0000      614.0000             0.66%
+      0     0      613.0000    10      610.0000       Cuts: 2     1602    0.49%
+*     0+    0                          612.0000      613.0000             0.16%
+      0     0        cutoff            612.0000      613.0000     1602    0.16%
+Elapsed time = 0.32 sec. (533.38 ticks, tree = 0.01 MB, solutions = 2)
+
+Clique cuts applied:  1
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.32 sec. (536.07 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.32 sec. (536.07 ticks)
+CPLEX 22.2.0: optimal solution; objective 612
+1602 simplex iterations
+Setup time = 0.039698s
+Solver time = 0.322915s
+Total time = 0.362624s
+
+suffix time OUT;
+suffix time_setup OUT;
+suffix time_solver OUT;
+Time (seconds): AMPL processing = 0.738 | Solver = 0.396 | Total = 1.134
+Pairs: 1000 | Patients matched: 612 | Swaps: 306 | Matched: 61.20%

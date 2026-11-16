@@ -1,0 +1,39 @@
+CPLEX 22.2.0:   tech:mipdisplay = 2
+  mip:gap = 0
+  tech:threads = 1
+  tech:timing = 1
+
+AMPL MP initial flat model has 2 variables (0 integer, 2 binary);
+Objectives: 1 linear; 
+Constraints:  1 linear;
+
+AMPL MP final model has 2 variables (0 integer, 2 binary);
+Objectives: 1 linear; 
+Constraints:  1 linear;
+
+
+Version identifier: 22.2.0.0 | 2026-05-04 | 5dff98e58
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 0.000000 after 0.00 sec. (0.00 ticks)
+Found incumbent of value 2.000000 after 0.00 sec. (0.00 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (0.00 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.00 sec. (0.00 ticks)
+CPLEX 22.2.0: optimal solution; objective 2
+0 simplex iterations
+Setup time = 0.014502s
+Solver time = 0.003519s
+Total time = 0.018073s
+
+suffix time OUT;
+suffix time_setup OUT;
+suffix time_solver OUT;
+Time (seconds): AMPL processing = 0.002 | Solver = 0.038 | Total = 0.040
+Pairs: 10 | Patients matched: 2 | Swaps: 1 | Matched: 20.00%
