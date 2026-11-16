@@ -1,0 +1,24 @@
+reset;
+model exercise1.mod;
+data exercise1.dat;
+
+option solver cplex;
+option cplex_options 'mipdisplay=2 mipgap=0 threads=1 timing=1';
+option times 1;
+
+read {i in V, j in V} c[i,j] < (raw_file);
+close (raw_file);
+
+solve;
+if solve_result_num >= 100 then {
+    printf "No optimal solution reported (%s).\n", solve_result;
+    exit 1;
+}
+
+printf "Pairs: %d | Patients matched: %d | Swaps: %d | Matched: %.2f%%\n",
+    n, round(Matched), round(Matched / 2), 100 * Matched / n;
+
+param output_file symbolic := "exercise1_" & n & "_matches.txt";
+print {i in V}:
+    {j in V} (if (i,j) in E then round(X[i,j]) else 0) > (output_file);
+close (output_file);
